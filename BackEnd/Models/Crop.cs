@@ -15,5 +15,7 @@ public partial class Crop
 
     public virtual Category Category { get; set; } = null!;
 
+    public virtual ICollection<CropRateHistory> CropRateHistories { get; set; } = new List<CropRateHistory>();
+
     public virtual ICollection<Farmer> Farmers { get; set; } = new List<Farmer>();
 }
