@@ -23,7 +23,11 @@ public partial class ApmcdbContext : DbContext
 
     public virtual DbSet<Crop> Crops { get; set; }
 
+    public virtual DbSet<CropRateHistory> CropRateHistories { get; set; }
+
     public virtual DbSet<Farmer> Farmers { get; set; }
+
+    public virtual DbSet<FarmerShopkeeper> FarmerShopkeepers { get; set; }
 
     public virtual DbSet<Feedback> Feedbacks { get; set; }
 
@@ -132,6 +136,32 @@ public partial class ApmcdbContext : DbContext
                 .HasConstraintName("FK_Crop_Category");
         });
 
+        modelBuilder.Entity<CropRateHistory>(entity =>
+        {
+            entity.HasKey(e => e.HistoryId).HasName("PK__CropRate__A6BAB5D763BDE47B");
+
+            entity.ToTable("CropRateHistory");
+
+            entity.Property(e => e.HistoryId).HasColumnName("History_Id");
+            entity.Property(e => e.CropId).HasColumnName("Crop_Id");
+            entity.Property(e => e.RateDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnName("Rate_Date");
+            entity.Property(e => e.UpdatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("Updated_At");
+            entity.Property(e => e.UpdatedBy)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("Updated_By");
+
+            entity.HasOne(d => d.Crop).WithMany(p => p.CropRateHistories)
+                .HasForeignKey(d => d.CropId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_CropRateHistory_Crop");
+        });
+
         modelBuilder.Entity<Farmer>(entity =>
         {
             entity.HasKey(e => e.FarmerId).HasName("PK__Farmer__2C147561B8A94FB7");
@@ -181,6 +211,28 @@ public partial class ApmcdbContext : DbContext
                 .HasConstraintName("FK_Farmer_Shopkeeper");
         });
 
+        modelBuilder.Entity<FarmerShopkeeper>(entity =>
+        {
+            entity.HasKey(e => e.FarmerShopkeeperId).HasName("PK__FarmerSh__A3EFEEE65A40E01A");
+
+            entity.ToTable("FarmerShopkeeper");
+
+            entity.Property(e => e.FarmerShopkeeperId).HasColumnName("FarmerShopkeeper_Id");
+            entity.Property(e => e.FarmerId).HasColumnName("Farmer_Id");
+            entity.Property(e => e.ShopkeeperId).HasColumnName("Shopkeeper_Id");
+            entity.Property(e => e.Timestamp)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+
+            entity.HasOne(d => d.Farmer).WithMany(p => p.FarmerShopkeepers)
+                .HasForeignKey(d => d.FarmerId)
+                .HasConstraintName("FK_FarmerShopkeeper_Farmer");
+
+            entity.HasOne(d => d.Shopkeeper).WithMany(p => p.FarmerShopkeepers)
+                .HasForeignKey(d => d.ShopkeeperId)
+                .HasConstraintName("FK_FarmerShopkeeper_Shopkeeper");
+        });
+
         modelBuilder.Entity<Feedback>(entity =>
         {
             entity.HasKey(e => e.FeedbackId).HasName("PK__feedback__7A6B2B8C2E98984D");
@@ -214,7 +266,6 @@ public partial class ApmcdbContext : DbContext
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasDefaultValue("default@gmail.com");
-            entity.Property(e => e.FarmerId).HasColumnName("Farmer_Id");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -242,11 +293,6 @@ public partial class ApmcdbContext : DbContext
                 .HasForeignKey(d => d.CategoryId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Shopkeeper_Category");
-
-            entity.HasOne(d => d.Farmer).WithMany(p => p.Shopkeepers)
-                .HasForeignKey(d => d.FarmerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Shopkeeper_Farmer");
         });
 
         OnModelCreatingPartial(modelBuilder);
