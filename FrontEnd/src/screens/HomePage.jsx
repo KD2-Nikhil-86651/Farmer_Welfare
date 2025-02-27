@@ -7,7 +7,7 @@ function HomePage() {
     <div
       className="min-h-screen bg-light"
       style={{
-        backgroundColor: "#f8f9fa", // Lighter background color for simplicity
+        backgroundColor: "#f8f9fa", 
       }}
     >
       <Navbar />
