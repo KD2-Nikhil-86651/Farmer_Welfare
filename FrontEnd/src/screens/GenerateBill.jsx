@@ -15,6 +15,9 @@ const GenerateBill = () => {
     );
   }
 
+  // Get the shopkeeper's surname (shop name)
+  const shopName = shopkeeper.lastName ? `${shopkeeper.lastName} Trading Co.` : "Default Trading Co.";
+
   return (
     <div className="container">
       <Navbar />
@@ -22,7 +25,7 @@ const GenerateBill = () => {
       <div className="card p-4 shadow mt-3">
         {/* Bill Header */}
         <div className="text-center">
-          <h3>Ship Malai Trading Co.</h3>
+          <h3>{shopName}</h3>
           <p>ทะเบียนงาน: 333300098, ทะเบียนงาน: 44488888, โทรสาร: 344034404</p>
         </div>
 
