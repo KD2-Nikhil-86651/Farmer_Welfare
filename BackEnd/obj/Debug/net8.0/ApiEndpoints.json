@@ -1,0 +1,375 @@
+[
+  {
+    "ContainingType": "FarmerBackend.Controllers.AdminController",
+    "Method": "GetAdmins",
+    "RelativePath": "api/Admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.AdminController",
+    "Method": "Login",
+    "RelativePath": "api/Admin/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adminLogin",
+        "Type": "FarmerBackend.Dto.AdminLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "FarmerBackend.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.BuyerController",
+    "Method": "GetBuyers",
+    "RelativePath": "api/Buyer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.BuyerController",
+    "Method": "GetBuyer",
+    "RelativePath": "api/Buyer/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.BuyerController",
+    "Method": "UpdateBuyer",
+    "RelativePath": "api/Buyer/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "buyerUpdate",
+        "Type": "FarmerBackend.Dto.BuyerUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.BuyerController",
+    "Method": "Login",
+    "RelativePath": "api/Buyer/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "buyerLogin",
+        "Type": "FarmerBackend.Dto.BuyerLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.BuyerController",
+    "Method": "Register",
+    "RelativePath": "api/Buyer/Registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "buyerRegistration",
+        "Type": "FarmerBackend.Dto.BuyerRegistration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.CropsController",
+    "Method": "GetCrops",
+    "RelativePath": "api/Crops",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.CropsController",
+    "Method": "GetCropRateHistory",
+    "RelativePath": "api/Crops/rate-history/{cropId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cropId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.CropsController",
+    "Method": "UpdateCropRate",
+    "RelativePath": "api/Crops/update-rate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FarmerBackend.Dto.UpdateCropRateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.FarmerController",
+    "Method": "GetFarmers",
+    "RelativePath": "api/Farmer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.FarmerController",
+    "Method": "GetFarmer",
+    "RelativePath": "api/Farmer/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.FarmerController",
+    "Method": "UpdateFarmer",
+    "RelativePath": "api/Farmer/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "farmerUpdate",
+        "Type": "FarmerBackend.Dto.FarmerUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.FarmerController",
+    "Method": "Login",
+    "RelativePath": "api/Farmer/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "farmerLogin",
+        "Type": "FarmerBackend.Dto.FarmerLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.FarmerController",
+    "Method": "Register",
+    "RelativePath": "api/Farmer/Registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "farmerRegistration",
+        "Type": "FarmerBackend.Dto.FarmerRegistration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.FeedbackController",
+    "Method": "PostFeedback",
+    "RelativePath": "api/Feedback",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "feedback",
+        "Type": "FarmerBackend.Models.Feedback",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.FeedbackController",
+    "Method": "GetAllFeedback",
+    "RelativePath": "api/Feedback",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FarmerBackend.Models.Feedback, FarmerBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.FeedbackController",
+    "Method": "DeleteFeedback",
+    "RelativePath": "api/Feedback/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.ShopkeeperController",
+    "Method": "GetShopkeepers",
+    "RelativePath": "api/Shopkeeper",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.ShopkeeperController",
+    "Method": "GetShopkeeper",
+    "RelativePath": "api/Shopkeeper/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.ShopkeeperController",
+    "Method": "UpdateShopkeeper",
+    "RelativePath": "api/Shopkeeper/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "shopkeeperUpdate",
+        "Type": "FarmerBackend.Dto.ShopkeeperUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.ShopkeeperController",
+    "Method": "Login",
+    "RelativePath": "api/Shopkeeper/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shopkeeperLogin",
+        "Type": "FarmerBackend.Dto.ShopkeeperLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FarmerBackend.Controllers.ShopkeeperController",
+    "Method": "Register",
+    "RelativePath": "api/Shopkeeper/Registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shopkeeperRegistration",
+        "Type": "FarmerBackend.Dto.ShopkeeperRegistration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
