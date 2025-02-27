@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
@@ -15,8 +12,8 @@ function AllFarmer() {
 
   // Define the toast style for success messages
   const successToastStyle = {
-    background: "green",  // Green color for success message
-    color: "white",       // Ensure text is readable
+    background: "green", // Green color for success message
+    color: "white", // Ensure text is readable
   };
 
   const fetchFarmers = async () => {
@@ -61,7 +58,7 @@ function AllFarmer() {
       text: `Bill generation for Farmer ${farmer.farmerId} initiated.`,
       duration: 3000,
       close: true,
-      style: successToastStyle,  // Use the defined success style
+      style: successToastStyle, // Use the defined success style
     }).showToast();
   };
 
