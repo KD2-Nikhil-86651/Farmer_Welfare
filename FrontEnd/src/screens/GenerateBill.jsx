@@ -19,9 +19,10 @@ const GenerateBill = () => {
 
   return (
     <div className="container border p-4">
-      <Navbar />
+      <Navbar /><br /><br /><br />
       <div className="text-center">
         <h5><strong>Agriculture Produce Market Committee</strong></h5>
+        <hr style={{ border: "2px solid black" }} />
         <h3>{shopName}</h3>
         <p>Onion, Potato, Garlic & Vegetables dealers</p>
         <p>Shri Chhatrapati Shivaji Market Yard, Pune - 411037</p>
@@ -39,37 +40,37 @@ const GenerateBill = () => {
         </div>
         <div>
           <p>Name of the Farmer: {farmer.firstName} {farmer.lastName}</p>
-          <p>Transport: (Enter Name here)</p>
+          <p>Transport: <input type="text" placeholder="Enter transport name" /></p>
         </div>
       </div>
 
-      <table className="table table-bordered mt-3 text-center">
-        <thead>
-          <tr>
-            <th>Qty</th>
-            <th>Types of goods</th>
-            <th>Net Weight</th>
-            <th>Per 10KG Rate</th>
-            <th>Total</th>
-            <th>Details of Expense</th>
-            <th>Money RS.</th>
+      <table className="table table-bordered mt-3 text-center" style={{ border: "2px solid black" }}>
+        <thead style={{ border: "2px solid black" }}>
+          <tr style={{ border: "2px solid black" }}>
+            <th style={{ border: "2px solid black" }}>Qty</th>
+            <th style={{ border: "2px solid black" }}>Types of goods</th>
+            <th style={{ border: "2px solid black" }}>Net Weight</th>
+            <th style={{ border: "2px solid black" }}>Per 10KG Rate</th>
+            <th style={{ border: "2px solid black" }}>Total</th>
+            <th style={{ border: "2px solid black" }}>Details of Expense</th>
+            <th style={{ border: "2px solid black" }}>Money RS.</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><input type="text" placeholder="Enter qty" /></td>
-            <td><input type="text" placeholder="Enter goods" /></td>
-            <td><input type="text" placeholder="Enter weight" /></td>
-            <td><input type="text" /></td>
-            <td><input type="text" /></td>
-            <td>
+          <tr style={{ border: "2px solid black" }}>
+            <td style={{ border: "2px solid black" }}><input type="text" placeholder="Enter qty" /></td>
+            <td style={{ border: "2px solid black" }}><input type="text" placeholder="Enter goods" /></td>
+            <td style={{ border: "2px solid black" }}><input type="text" placeholder="Enter weight" /></td>
+            <td style={{ border: "2px solid black" }}><input type="text" /></td>
+            <td style={{ border: "2px solid black" }}><input type="text" /></td>
+            <td style={{ border: "2px solid black" }}>
               <p>Hamali</p>
               <p>Borai</p>
               <p>Tolai</p>
               <p>Mapai</p>
               <p>Motor fare</p>
             </td>
-            <td>
+            <td style={{ border: "2px solid black" }}>
               <input type="text" />
               <input type="text" />
               <input type="text" />
@@ -77,9 +78,10 @@ const GenerateBill = () => {
               <input type="text" />
             </td>
           </tr>
-          <tr>
+          <tr style={{ border: "2px solid black" }}>
             <td colSpan="3"></td>
-            <td>
+            <td style={{ border: "2px solid black" }}>
+              <p>Net RS.: <input type="text" /></p>
               <p>Total RS.: <input type="text" /></p>
               <p>Less Expense: <input type="text" /></p>
               <p>Balance: <input type="text" /></p>
@@ -101,4 +103,3 @@ const GenerateBill = () => {
 };
 
 export default GenerateBill;
-
