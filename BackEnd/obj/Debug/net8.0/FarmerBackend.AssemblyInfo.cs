@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FarmerBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cec0d6fd6befe77ffb093fb1f1e49c2b1614426")]
 [assembly: System.Reflection.AssemblyProductAttribute("FarmerBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FarmerBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

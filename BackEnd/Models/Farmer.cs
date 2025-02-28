@@ -31,7 +31,7 @@ public partial class Farmer
 
     public virtual Crop? Crop { get; set; }
 
-    public virtual Shopkeeper? Shopkeeper { get; set; }
+    public virtual ICollection<FarmerShopkeeper> FarmerShopkeepers { get; set; } = new List<FarmerShopkeeper>();
 
-    public virtual ICollection<Shopkeeper> Shopkeepers { get; set; } = new List<Shopkeeper>();
+    public virtual Shopkeeper? Shopkeeper { get; set; }
 }

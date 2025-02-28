@@ -42,6 +42,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BillApi.Controllers.BillsController",
+    "Method": "SaveBill",
+    "RelativePath": "api/Bills/saveBill",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bill",
+        "Type": "FarmerBackend.Models.Bill",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FarmerBackend.Controllers.BuyerController",
     "Method": "GetBuyers",
     "RelativePath": "api/Buyer",

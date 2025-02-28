@@ -17,8 +17,6 @@ public partial class Shopkeeper
 
     public string Password { get; set; } = null!;
 
-    public int FarmerId { get; set; }
-
     public int Quantity { get; set; }
 
     public int Rate { get; set; }
@@ -37,7 +35,7 @@ public partial class Shopkeeper
 
     public virtual Category Category { get; set; } = null!;
 
-    public virtual Farmer Farmer { get; set; } = null!;
+    public virtual ICollection<FarmerShopkeeper> FarmerShopkeepers { get; set; } = new List<FarmerShopkeeper>();
 
     public virtual ICollection<Farmer> Farmers { get; set; } = new List<Farmer>();
 }

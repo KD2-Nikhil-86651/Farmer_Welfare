@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Nikhil\\Desktop\\Practice Demo\\MS.net\\FarmerBackend\\FarmerBackend.csproj": {}
+    "D:\\Nikhil\\Desktop\\Farmer_Welfare\\BackEnd\\FarmerBackend.csproj": {}
   },
   "projects": {
-    "D:\\Nikhil\\Desktop\\Practice Demo\\MS.net\\FarmerBackend\\FarmerBackend.csproj": {
+    "D:\\Nikhil\\Desktop\\Farmer_Welfare\\BackEnd\\FarmerBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Nikhil\\Desktop\\Practice Demo\\MS.net\\FarmerBackend\\FarmerBackend.csproj",
+        "projectUniqueName": "D:\\Nikhil\\Desktop\\Farmer_Welfare\\BackEnd\\FarmerBackend.csproj",
         "projectName": "FarmerBackend",
-        "projectPath": "D:\\Nikhil\\Desktop\\Practice Demo\\MS.net\\FarmerBackend\\FarmerBackend.csproj",
+        "projectPath": "D:\\Nikhil\\Desktop\\Farmer_Welfare\\BackEnd\\FarmerBackend.csproj",
         "packagesPath": "C:\\Users\\nikhi\\.nuget\\packages\\",
-        "outputPath": "D:\\Nikhil\\Desktop\\Practice Demo\\MS.net\\FarmerBackend\\obj\\",
+        "outputPath": "D:\\Nikhil\\Desktop\\Farmer_Welfare\\BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -71,6 +71,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.9.0, )"
             }
           },
           "imports": [
@@ -92,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
