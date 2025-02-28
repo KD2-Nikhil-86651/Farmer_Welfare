@@ -17,9 +17,6 @@ public partial class ApmcdbContext : DbContext
 
     public virtual DbSet<Admin> Admins { get; set; }
 
-    public DbSet<Bill> Bills { get; set; } // Update to Bills
-
-
     public virtual DbSet<Buyer> Buyers { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
